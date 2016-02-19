@@ -1,0 +1,197 @@
+package CONTADOR_DE_CELES;
+import javax.swing.Timer;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+
+/**
+ *
+ * @author Cypruska
+ */
+public class contador_de_celes extends javax.swing.JFrame {
+  
+    /**
+     *
+     */
+    public JPanel Contador_de_Celeridad;  
+   public Timer CONTADOR_DE_CELES ;
+    public int count = 45;
+    
+    
+    public contador_de_celes() {
+        initComponents();
+    }
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jFrame1 = new javax.swing.JFrame();
+        jFrame2 = new javax.swing.JFrame();
+        DALE = new javax.swing.JButton();
+        AGUANTA1 = new javax.swing.JButton();
+        N1 = new javax.swing.JLabel();
+        jProgressBar1 = new javax.swing.JProgressBar();
+
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jFrame2Layout = new javax.swing.GroupLayout(jFrame2.getContentPane());
+        jFrame2.getContentPane().setLayout(jFrame2Layout);
+        jFrame2Layout.setHorizontalGroup(
+            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame2Layout.setVerticalGroup(
+            jFrame2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        DALE.setText("SI");
+        DALE.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DALEActionPerformed(evt);
+            }
+        });
+
+        AGUANTA1.setText("NO");
+        AGUANTA1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AGUANTA1ActionPerformed(evt);
+            }
+        });
+
+        N1.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(N1, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(DALE, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(AGUANTA1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {AGUANTA1, DALE});
+
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(N1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(AGUANTA1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(DALE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {AGUANTA1, DALE});
+
+        pack();
+    }// </editor-fold>                        
+
+    private void DALEActionPerformed(java.awt.event.ActionEvent evt) {                                     
+                                        
+        CONTADOR_DE_CELES = new Timer(1000, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae/* Puede haber problemas con la AE: si lo hay, cambiar a E*/) {
+                count--;
+                N1.setText(count + "");
+
+                if (count == 0) {
+
+                    count = 45;
+                    
+                }
+                    if (count == 45){
+                    jProgressBar1.setValue(0); 
+                }
+                    if (count == 40){
+                    jProgressBar1.setValue(11); 
+                }
+                    if (count == 35){
+                    jProgressBar1.setValue(22); 
+                }
+                    if (count == 30){
+                    jProgressBar1.setValue(33); 
+                }
+                    if (count == 25){
+                    jProgressBar1.setValue(44); 
+                }
+                    if (count == 20){
+                    jProgressBar1.setValue(56); 
+                }
+                    if (count == 15){
+                    jProgressBar1.setValue(67); 
+                }
+                    if (count == 10){
+                    jProgressBar1.setValue(78); 
+                }   if (count == 5){
+                    jProgressBar1.setValue(90); 
+                }
+                    if (count == 1){
+                    jProgressBar1.setValue(100); 
+                }
+
+                repaint();
+            }
+        });
+        CONTADOR_DE_CELES.start();
+
+ 
+    }                                    
+
+    private void AGUANTA1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+ CONTADOR_DE_CELES.stop(); 
+ 
+// TODO add your handling code here:
+    }                                        
+  
+    
+    
+  
+   
+    public static void main(String args[]) {
+      
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new contador_de_celes().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JButton AGUANTA1;
+    private javax.swing.JButton DALE;
+    private javax.swing.JLabel N1;
+    private javax.swing.JFrame jFrame1;
+    private javax.swing.JFrame jFrame2;
+    private javax.swing.JProgressBar jProgressBar1;
+    // End of variables declaration                   
+}
